@@ -12,6 +12,7 @@ class Song < ActiveRecord::Base
     if self.artist.nil?
       self.artist = drake
       drake.save
+    elsif self.artist = drake
     end
   end
 end
