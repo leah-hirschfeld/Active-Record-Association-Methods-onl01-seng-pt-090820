@@ -14,7 +14,7 @@ class Song < ActiveRecord::Base
     if self.artist.nil?
       Drake = Artist.new(name: "Drake")
       binding.pry
-      self.artist.create(artist: "Drake")
+      self.artist = Drake
     end
   end
 end
