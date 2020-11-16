@@ -8,13 +8,13 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    if Artist.all.find_by(name: "Drake") == false
+    if Artist.all.find_by(name: "Drake")
+      self.artist == Artist.all.find_by(name: "Drake")
+    else
       drake = Artist.new(name: "Drake")
       self.artist = drake
       self.artist
       drake.save
-    else
-      self.artist == Artist.all.find_by(name: "Drake")
     end
   end
 end
