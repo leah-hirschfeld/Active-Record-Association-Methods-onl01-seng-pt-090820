@@ -13,4 +13,5 @@ class Song < ActiveRecord::Base
     if self.artist.nil?
     self.create_artist(artist: "Drake")
   end
+  end
 end
