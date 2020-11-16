@@ -8,8 +8,8 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
+    drake = Artist.new(name: "Drake")
     if self.artist.nil?
-      drake = Artist.new(name: "Drake")
       self.artist = drake
       drake.save
     end
