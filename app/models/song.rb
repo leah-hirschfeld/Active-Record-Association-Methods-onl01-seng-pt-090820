@@ -11,6 +11,7 @@ class Song < ActiveRecord::Base
     if Artist.all.include? "Drake"
       self.artist == "Drake"
     else
+      binding.pry
       drake = Artist.new(name: "Drake")
       self.artist = drake
       self.artist
