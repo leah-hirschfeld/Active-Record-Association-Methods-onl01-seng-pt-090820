@@ -8,7 +8,7 @@ class Song < ActiveRecord::Base
   end
 
   def drake_made_this
-    if Artist.all.find(name:"Drake") 
+    if Artist.all.find(name: "Drake") 
       self.artist == "Drake"
     else
       drake = Artist.new(name: "Drake")
