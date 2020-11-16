@@ -12,6 +12,7 @@ class Genre < ActiveRecord::Base
 
   def all_artist_names
     array_of_artists = []
+    binding.pry
     array_of_artists << self.artists[0].name
     array_of_artists << self.artists[1].name
     array_of_artists << self.artists[2].name
